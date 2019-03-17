@@ -26,6 +26,10 @@ abstract class Solution {
 
   protected def execute: Array[Slide]
 
+  protected def updateN = {
+    n = hPics.size + vPics.size / 2
+  }
+
   private def finish(slides: Array[Slide]): Unit = {
     val score = totalScore(slides)
     println(s"Total Score: $score")
@@ -41,7 +45,7 @@ abstract class Solution {
     })
     hPics = pics.filter(_.orientation == H).toSet
     vPics = pics.filter(_.orientation == V).toSet
-    n = hPics.size + vPics.size / 2
+    updateN
   }
 
   private def totalScore(slides: Array[Slide]) = slides.sliding(2).foldLeft(0)((score, pair) => score + pair.head.score(pair(1)))
