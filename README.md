@@ -4,7 +4,7 @@
 
 Solution for Google Hash Code 2019 Qualification Round. Problem statement can be found [here](https://storage.googleapis.com/coding-competitions.appspot.com/HC/2019/hashcode2019_qualification_task.pdf).
 
-**Please note:** This solution did not actually participate in 2019's qualification round, but was created afterwards. It exceeds the runtime constraints and therefore would not have been suitable as an actual solution.
+**Please note:** This solution did not actually participate in 2019's qualification round, but was created afterwards. It exceeds the runtime constraints and therefore would not have been suitable as a submission.
 
 ## Approaches
 **1. Naive approach** (`GreedyNaive.scala`) (_O(n²)_ worst case): 
