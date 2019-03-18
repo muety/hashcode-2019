@@ -4,9 +4,9 @@
 
 Solution for Google Hash Code 2019 Qualification Round. Problem statement can be found [here](https://storage.googleapis.com/coding-competitions.appspot.com/HC/2019/hashcode2019_qualification_task.pdf).
 
-**Please note:** This solution did not actually participate in 2019's qualification round, but was created afterwards. It exceeds the runtime constraints and therefore would not have been suitable as an actual solution.
+**Please note:** This solution did not actually participate in 2019's qualification round, but was created afterwards. It exceeds the runtime constraints and therefore would not have been suitable as a submission.
 
-## Aproaches
+## Approaches
 **1. Naive approach** (`GreedyNaive.scala`) (_O(n²)_ worst case): 
   1. Construct slides from vertical pictures by iteratively combining those with most tags
   2. For every slide, iteratively find slide with highest _interest_ factor in a greedy-like way
@@ -38,6 +38,8 @@ Solution for Google Hash Code 2019 Qualification Round. Problem statement can be
 
 **Total:** 848,373 points, 4.23 hours ☠️
 **Est. rank:** 461 / 6671 (6.9 %)
+
+The results were produced in parallel fashion on a 12-core CPU.
 
 ## Conclusion
 The naive approach is totally unrealistic due to extensive runtime. The filtered naive approach essentially trades off score vs. runtime. By tweaking its parameters, runtime could probably be pushed down to ~ 3 hours while losing total score. All in all, a more sophisticated solution would be appropriate...
