@@ -31,12 +31,12 @@ Solution for Google Hash Code 2019 Qualification Round. Problem statement can be
 
 ### Filtered naive approach
 * `a_example.txt`: 2 points, 0.13 seconds
-* `b_lovely_landscapes.txt`: 88878 points, 1.90 hours
-* `c_memorable_moments.txt`: 1489 points, 2.53 seconds
-* `d_pet_pictures.txt`: 406456 points, 2.00 hours
-* `e_shiny_selfies.txt`: 361550 points, 0.59 hours
+* `b_lovely_landscapes.txt`: 81306 points, 1.57 hours
+* `c_memorable_moments.txt`: 1489 points, 2.65 seconds
+* `d_pet_pictures.txt`: 406488 points, 1.96 hours
+* `e_shiny_selfies.txt`: 361380 points, 0.7 hours
 
-**Total:** 848,373 points, 7 hours ☠️
+**Total:** 848,373 points, 4.23 hours ☠️
 **Est. rank:** 461 / 6671 (6.9 %)
 
 ## Conclusion

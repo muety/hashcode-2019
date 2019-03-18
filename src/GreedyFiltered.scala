@@ -1,4 +1,4 @@
-class GreedyFiltered(trimThreshold: Int = 10000, tagSizeTolerance: Int = 1, fallbackConsiderRatio: Float = .3f) extends Solution {
+class GreedyFiltered(trimThreshold: Int = 10000, tagSizeTolerance: Int = 1, fallbackConsiderRatio: Float = .1f) extends Solution {
   var hSlides: List[Slide] = List()
   var vSlides: List[Slide] = List()
   var hPicList: List[Picture] = List()
