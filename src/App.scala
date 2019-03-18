@@ -1,5 +1,5 @@
 object App extends App {
-  val solution = new GreedySolutionTrimmed
+  val solution = new GreedyFiltered
   solution.run("a")
   solution.run("b")
   solution.run("c")

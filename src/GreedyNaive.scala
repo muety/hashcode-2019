@@ -1,6 +1,6 @@
 import scala.collection.parallel.ParSet
 
-class GreedySolution extends Solution {
+class GreedyNaive extends Solution {
   var hSlides: ParSet[Slide] = null
   var vSlides: ParSet[Slide] = null
 

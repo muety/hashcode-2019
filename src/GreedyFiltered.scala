@@ -1,4 +1,4 @@
-class GreedySolutionTrimmed(trimThreshold: Int = 10000, tagSizeTolerance: Int = 2, fallbackConsiderRatio: Float = .2f) extends Solution {
+class GreedyFiltered(trimThreshold: Int = 10000, tagSizeTolerance: Int = 2, fallbackConsiderRatio: Float = .2f) extends Solution {
   var hSlides: List[Slide] = List()
   var vSlides: List[Slide] = List()
   var hPicList: List[Picture] = List()
@@ -6,7 +6,7 @@ class GreedySolutionTrimmed(trimThreshold: Int = 10000, tagSizeTolerance: Int = 
   var usedSlides: Set[Slide] = Set()
 
   override def execute = {
-    val cleanUpCooldown = 1000
+    val gcInterval = 1000
     val slides = Array.ofDim[Slide](n)
 
     time {
@@ -25,7 +25,7 @@ class GreedySolutionTrimmed(trimThreshold: Int = 10000, tagSizeTolerance: Int = 
         slides(i + 1) = slide
         usedSlides += slide
 
-        if (i % cleanUpCooldown == 0) cleanUp
+        if (i % gcInterval == 0) gc
       }
     }
     slides
@@ -50,7 +50,7 @@ class GreedySolutionTrimmed(trimThreshold: Int = 10000, tagSizeTolerance: Int = 
     Set(hMax, vMax).filter(_ != null).maxBy(_.score(slide))
   }
 
-  def cleanUp = {
+  def gc = {
     hSlides = hSlides.par.filter(!usedSlides.contains(_)).toList
     vSlides = vSlides.par.filter(!usedSlides.contains(_)).toList
   }
