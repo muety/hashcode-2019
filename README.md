@@ -39,6 +39,8 @@ Solution for Google Hash Code 2019 Qualification Round. Problem statement can be
 **Total:** 848,373 points, 7 hours ☠️
 **Est. rank:** 461 / 6671 (6.9 %)
 
+The results were produced in parallel fashion on a 12-core CPU.
+
 ## Conclusion
 The naive approach is totally unrealistic due to extensive runtime. The filtered naive approach essentially trades off score vs. runtime. By tweaking its parameters, runtime could probably be pushed down to ~ 3 hours while losing total score. All in all, a more sophisticated solution would be appropriate...
 
