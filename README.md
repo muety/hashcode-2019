@@ -6,7 +6,7 @@ Solution for Google Hash Code 2019 Qualification Round. Problem statement can be
 
 **Please note:** This solution did not actually participate in 2019's qualification round, but was created afterwards. It exceeds the runtime constraints and therefore would not have been suitable as an actual solution.
 
-## Aproaches
+## Approaches
 **1. Naive approach** (`GreedyNaive.scala`) (_O(n²)_ worst case): 
   1. Construct slides from vertical pictures by iteratively combining those with most tags
   2. For every slide, iteratively find slide with highest _interest_ factor in a greedy-like way
