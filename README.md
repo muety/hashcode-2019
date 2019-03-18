@@ -36,8 +36,8 @@ Solution for Google Hash Code 2019 Qualification Round. Problem statement can be
 * `d_pet_pictures.txt`: 406488 points, 1.96 hours
 * `e_shiny_selfies.txt`: 361380 points, 0.7 hours
 
-**Total:** 848,373 points, 4.23 hours ☠️
-**Est. rank:** 461 / 6671 (6.9 %)
+**Total:** 850,665 points, 4.23 hours ☠️
+**Est. rank:** 450 / 6671 (6.7 %)
 
 The results were produced in parallel fashion on a 12-core CPU.
 
