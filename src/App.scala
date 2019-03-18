@@ -1,8 +1,7 @@
 object App extends App {
-  val solution = new GreedyFiltered
-  solution.run("a")
-  solution.run("b")
-  solution.run("c")
-  solution.run("d")
-  solution.run("e")
+  new GreedyFiltered run "a"
+  new GreedyFiltered run "b"
+  new GreedyFiltered run "c"
+  new GreedyFiltered run "d"
+  new GreedyFiltered run "e"
 }

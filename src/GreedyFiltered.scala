@@ -1,4 +1,4 @@
-class GreedyFiltered(trimThreshold: Int = 10000, tagSizeTolerance: Int = 2, fallbackConsiderRatio: Float = .2f) extends Solution {
+class GreedyFiltered(trimThreshold: Int = 10000, tagSizeTolerance: Int = 1, fallbackConsiderRatio: Float = .3f) extends Solution {
   var hSlides: List[Slide] = List()
   var vSlides: List[Slide] = List()
   var hPicList: List[Picture] = List()
@@ -37,13 +37,13 @@ class GreedyFiltered(trimThreshold: Int = 10000, tagSizeTolerance: Int = 2, fall
       case s if s.isEmpty => List()
       case s if s.size < trimThreshold => s
       case s if s.exists(range contains _.tags.size) => s.filter(range contains _.tags.size)
-      case s => s.toList.sortBy(_.tags.size - slide.tags.size).take(math.ceil(s.size * fallbackConsiderRatio).toInt)
+      case s => s.toList.sortBy(sl => math.abs(sl.tags.size - slide.tags.size)).take(math.ceil(s.size * fallbackConsiderRatio).toInt)
     }
     val vConsider = vSlides.par.filter(!usedSlides.contains(_)) match {
       case s if s.isEmpty => List()
       case s if s.size < trimThreshold => s
       case s if s.exists(range contains _.tags.size) => s.filter(range contains _.tags.size)
-      case s => s.toList.sortBy(_.tags.size - slide.tags.size).take(math.ceil(s.size * fallbackConsiderRatio).toInt)
+      case s => s.toList.sortBy(sl => math.abs(sl.tags.size - slide.tags.size)).take(math.ceil(s.size * fallbackConsiderRatio).toInt)
     }
     val hMax = if (hConsider.nonEmpty) hConsider.par.maxBy(_.score(slide)) else null
     val vMax = if (vConsider.nonEmpty) vConsider.par.maxBy(_.score(slide)) else null
